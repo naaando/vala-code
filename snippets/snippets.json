@@ -2,10 +2,10 @@
     "GObject Class": {
         "prefix": "class",
         "body": [
-            "class ${1:ClassName} ${2:: GLib.Object} { ",
-            "\tpublic ${1:ClassName}() {",
-            "\t\t$0",
-            "\t}",
+            "class ${1:ClassName} ${2:: Object} {",
+                "public ${2}() {",
+                    "$0",
+                "}",
             "}"
         ],
         "description": "Defines a GObject Class, with a default public constructor."
@@ -15,7 +15,7 @@
         "body": [
             "[Compact]",
             "class ${1:ClassName} {",
-            "\t$0",
+                "$0",
             "}"
         ],
         "description": "Defines a compact class, not derived from GLib.Object."
@@ -24,7 +24,7 @@
         "prefix": "while",
         "body": [
             "while (${1:true}) {",
-            "\t$0",
+                "$0",
             "}"
         ],
         "description": "While loop"
@@ -33,7 +33,7 @@
         "prefix": "do",
         "body": [
             "do {",
-            "\t$0",
+                "$0",
             "} while (${1:true});"
         ],
         "description": "Do...While loop"
@@ -42,7 +42,7 @@
         "prefix": "for",
         "body": [
             "for (int ${1:a} = 0; ${1:a} < ${2:length}; ${1:a}++) {",
-            "\t$0",
+                "$0",
             "}"
         ],
         "description": "For loop"
@@ -51,7 +51,7 @@
         "prefix": "foreach",
         "body": [
             "foreach (var ${1:item} in ${2:collection}) {",
-            "\t$0",
+                "$0",
             "}"
         ],
         "description": "Foreach loop"
@@ -68,10 +68,10 @@
     "If Else": {
         "prefix": "ifelse",
         "body": [
-            "if (${1:true}) {",
-            "\t$0",
+            "if (${2:true}) {",
+                "$1",
             "} else {",
-            "\t",
+                "$0",
             "}"
         ],
         "description": "If...Else conditional"
@@ -88,8 +88,8 @@
         "prefix": "switch",
         "body": [
             "switch ($0) {",
-               "default:",
-               "\tbreak;", 
+                "default:",
+                    "break;",
             "}"
         ],
         "description": "Switch statement"
@@ -98,7 +98,7 @@
         "prefix": "struct",
         "body": [
             "struct ${1:StructName} {",
-               "\t$0", 
+                "$0",
             "}"
         ],
         "description": "Defines a struct type"
@@ -107,7 +107,7 @@
         "prefix": "interface",
         "body": [
             "interface ${1:InterfaceName} { ",
-                "\t$0",
+                "$0",
             "}"
         ],
         "description": "Defines a interface"
@@ -116,7 +116,7 @@
         "prefix": "enum",
         "body": [
             "enum ${1:EnumName} { ",
-                "\t${0:VALUE}",
+                "${0:VALUE}",
             "}"
         ],
         "description": "Defines a enumeration"
@@ -125,7 +125,7 @@
         "prefix": "namespace",
         "body": [
             "namespace ${1:NamespaceName} { ",
-                "\t$0",
+                "$0",
             "}"
         ],
         "description": "Defines a namespace"
@@ -134,9 +134,9 @@
         "prefix": "main",
         "body": [
             "public static int main(string[] args) {",
-                "\t$0",
+                "$0",
                 "",
-                "\treturn 0;",
+                "return 0;",
             "}"
         ],
         "description": "Main function"
