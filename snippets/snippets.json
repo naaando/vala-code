@@ -56,6 +56,15 @@
         ],
         "description": "Foreach loop"
     },
+    "Foreach Method": {
+        "prefix": "foreach",
+        "body": [
+            "foreach ((${1:item}) => {",
+                "$2",
+            "});"
+        ],
+        "description": "Foreach method"
+    },
     "If Else": {
         "prefix": "ifelse",
         "body": [
