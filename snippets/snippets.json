@@ -140,5 +140,69 @@
             "}"
         ],
         "description": "Main function"
+    },
+
+    "Add breakpoint to code": {
+        "prefix": "bp",
+        "body": [
+            "breakpoint ();"
+        ],
+        "description": "Insert breakpoint to gdb debugger"
+    },
+
+    "Print to console": {
+        "prefix": "print",
+        "body": [
+            "print (@\"$1\\n\");"
+        ],
+        "description": "Print output to console"
+    },
+
+    "Message": {
+        "prefix": "",
+        "body": [
+            "message ($1);"
+        ],
+        "description": "Log message to console"
+    },
+
+    "Warning": {
+        "prefix": "warning",
+        "body": [
+            "warning ($1);"
+        ],
+        "description": "Log warning to console"
+    },
+
+    "Critical": {
+        "prefix": "",
+        "body": [
+            "critical ($1);"
+        ],
+        "description": "Log critical message to console"
+    },
+
+    "Error": {
+        "prefix": "",
+        "body": [
+            "error ($1);"
+        ],
+        "description": "Log error to console"
+    },
+
+    "Debug": {
+        "prefix": "",
+        "body": [
+            "debug ($1);"
+        ],
+        "description": "Log debug message to console"
+    },
+
+    "Info": {
+        "prefix": "",
+        "body": [
+            "info ($1);"
+        ],
+        "description": "Log info to console"
     }
 }
